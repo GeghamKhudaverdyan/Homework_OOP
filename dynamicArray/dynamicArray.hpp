@@ -3,14 +3,28 @@
 
 #include <iostream>
 
-class dynamicArray{
+class DynamicArray {
 public:
+	//Default constructor
+	DynamicArray();
+	//Parametrized constructor
+	DynamicArray(int capacity);
+	//Coppy constructor
+	DynamicArray(const DynamicArray& cp);
+	//Copy assignment operator
+	DynamicArray& operator=(const DynamicArray& cpAsOp);
+	//Move constructor
+	DynamicArray(DynamicArray&& mv);
+	//Move assignment operator
+//	DynamicArray& operator=(DynamicArray&& mvAs);
+	//Destructor
+	~DynamicArray();
 	
-	dynamicArray();
-	dynamicArray(int capacity);
-	~dynamicArray();
-
+	//Push element for lvalue
 	void pushElement(int num);
+	//Push element for rvalue
+	void pushElement(int&& num);
+	//Print array
 	void printArray();
 
 private:

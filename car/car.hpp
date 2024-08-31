@@ -13,7 +13,7 @@ public:
 	//Copy constructor
 	Car(const Car& car);
 	
-	//Getters
+	//Getters	
 	std::string getMake()    const;
 	std::string getModel()   const;
 	int 	    getYear()    const;
