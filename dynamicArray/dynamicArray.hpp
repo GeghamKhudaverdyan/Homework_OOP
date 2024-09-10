@@ -14,16 +14,16 @@ public:
 	//Copy assignment operator
 	DynamicArray& operator=(const DynamicArray& cpAsOp);
 	//Move constructor
-	DynamicArray(DynamicArray&& mv);
+	DynamicArray(DynamicArray&& mv) noexcept;
 	//Move assignment operator
-//	DynamicArray& operator=(DynamicArray&& mvAs);
+	DynamicArray& operator=(DynamicArray&& mvAs) noexcept;
 	//Destructor
 	~DynamicArray();
 	
 	//Push element for lvalue
 	void pushElement(int num);
 	//Push element for rvalue
-	void pushElement(int&& num);
+	//void pushElement(int&& num);
 	//Print array
 	void printArray();
 
