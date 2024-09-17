@@ -21,4 +21,3 @@ private:
 };
 
 #endif // __PILOT__
-
